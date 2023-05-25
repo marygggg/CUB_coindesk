@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: coindesk
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+  datasource:
+    platform: h2
+    url: jdbc:h2:mem:db
+    username: admin
+    password: admin123
+    driverClassName: org.h2.Driver
+    schema: classpath:schema.sql
+
+server:
+  port: 8080
+  compression:
+    enabled: false
+
+version: v1
