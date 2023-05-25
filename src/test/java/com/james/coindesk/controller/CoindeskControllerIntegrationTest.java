@@ -1,8 +1,6 @@
 package com.james.coindesk.controller;
 
 import com.james.coindesk.service.CoindeskClientService;
-import com.james.coindesk.service.CurrencyNameService;
-import org.hamcrest.Matchers;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -16,14 +14,10 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest
 @AutoConfigureMockMvc
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class CoindeskControllerTest {
+class CoindeskControllerIntegrationTest {
     @Autowired
     private CoindeskClientService coindeskClientService;
 
