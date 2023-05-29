@@ -1,6 +1,10 @@
 spring:
   application:
     name: coindesk
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
   jpa:
     database: h2
     database-platform: org.hibernate.dialect.H2Dialect
@@ -25,3 +29,9 @@ server:
     enabled: false
 
 version: v1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
